@@ -8,10 +8,10 @@ from common.getfilename import GetFileName
 import os
 import time
 '''
-This class is the public-address-hidden-amount transfer balance when have no ennough amount
+This class is the private-address-hidden-amount transfer balance when have no ennough amount
 '''
-class NoEnoughPublicAddressHiddenAmount():
-    def no_enough_public_address_hidden_amount(self):
+class NoEnoughPrivateAddressHiddenAmount():
+    def no_enough_private_address_hidden_amount(self):
         '---------------------Log in and check the amount--------------------------------------------'
 
         #send  TRY login process
@@ -66,9 +66,15 @@ class NoEnoughPublicAddressHiddenAmount():
         driver.find_element_by_xpath(
             '/html/body/div/div/main/div/div/div[3]/article/article[1]/section/div[2]/div/input').send_keys(amount)
         time.sleep(2)
+
+        # Click the private address button
+        driver.find_element_by_xpath(
+            '//*[@id="app"]/div/main/div/div/div[3]/article/article[1]/a[1]').click()
+
         # Click the hide amount button
         driver.find_element_by_xpath(
             '/html/body/div/div/main/div/div/div[3]/article/article[1]/a[2]').click()
+        time.sleep(1)
         #Click the trade button
         driver.find_element_by_xpath(
             '/html/body/div/div/main/div/div/div[3]/article/article[1]/div[2]/div/a').click()
@@ -77,11 +83,13 @@ class NoEnoughPublicAddressHiddenAmount():
             '/html/body/div/div/main/div/div/div[3]/article/article[2]/section/section/div[2]/button[2]').click()
         #Wait for the trade page to change
         try:
-            wait.until(EC.presence_of_all_elements_located((By.XPATH,
-                                                            '/html/body/div/div/main/div/div[1]/article[2]/section/a[2]/span')))
+            wait.until(EC.presence_of_all_elements_located((
+                By.XPATH,
+                '/html/body/div/div/main/div/div[1]/article[2]/section/a[2]/span')))
         except:
             print('Transaction timeout')
         time.sleep(3)
+
         '-------------------------------------------check account----------------------------------------------'
         for i in range(100):
             time.sleep(2)
@@ -142,6 +150,11 @@ class NoEnoughPublicAddressHiddenAmount():
                 '/html/body/div/div/main/div/div/div[3]/article/article[1]/div[1]/div[1]/input').send_keys(splits[2])
         driver.find_element_by_xpath(
             '/html/body/div/div/main/div/div/div[3]/article/article[1]/section/div[2]/div/input').send_keys(50)
+
+        # Click the private address button
+        driver.find_element_by_xpath(
+            '//*[@id="app"]/div/main/div/div/div[3]/article/article[1]/a[1]').click()
+        time.sleep(2)
         # Click the hide amount button
         driver.find_element_by_xpath(
             '/html/body/div/div/main/div/div/div[3]/article/article[1]/a[2]').click()
