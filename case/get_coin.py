@@ -30,6 +30,7 @@ class GetCoin():
         creat  TRY coin
         '''
         for i in range(int(coin)//100):
-            time.sleep(1)
+            time.sleep(2)
             bs.find_element('classname<=>content-form-signup').click()
+            time.sleep(2)
         driver.quit()
