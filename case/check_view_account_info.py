@@ -11,8 +11,8 @@ import time
 class CheckViewAccountInfo():
      def check_view_account_info(self):
         # getconfig coin and hidden coin
-        coin=GetConf().get_coins('coin')
-        hidden_coin=GetConf().get_coins('hidden_coin')
+        coin=GetConf().get_coins('theCoins','coin')
+        hidden_coin=GetConf().get_coins('theCoins','hidden_coin')
         account_all_coins=int(coin)+int(hidden_coin)
 
         # The login process for send TRY
@@ -32,7 +32,7 @@ class CheckViewAccountInfo():
             # Calculate folder length
             len1 = len(os.listdir(url))
             v1 = url + files[len1 - 2]
-            wait = WebDriverWait(driver, 10)
+            wait = WebDriverWait(driver, 60)
             wait.until(EC.presence_of_all_elements_located((By.XPATH, '//*[@id="fselector"]')))
             # Upload a file
             driver.find_element_by_xpath('//*[@id="fselector"]').send_keys(v1)
@@ -58,5 +58,3 @@ class CheckViewAccountInfo():
                 break
         time.sleep(3)
         driver.quit()
-if __name__ == '__main__':
-    CheckViewAccountInfo().check_view_account_info()

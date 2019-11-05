@@ -26,7 +26,7 @@ class SendPublicAddressHiddenAmount():
         len1 = len(os.listdir(url))
         v1 = url + files[len1 - 2]
 
-        wait = WebDriverWait(driver, 45)
+        wait = WebDriverWait(driver, 60)
         wait.until(EC.presence_of_all_elements_located((By.XPATH,'//*[@id="fselector"]')))
         #Upload a file
         driver.find_element_by_xpath('//*[@id="fselector"]').send_keys(v1)
@@ -80,7 +80,6 @@ class SendPublicAddressHiddenAmount():
                                                             '/html/body/div/div/main/div/div[1]/article[2]/section/a[2]/span')))
         except:
             print('Transaction timeout')
-        time.sleep(3)
         time.sleep(3)
         for i in range(100):
             time.sleep(2)

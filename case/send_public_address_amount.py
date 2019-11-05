@@ -27,7 +27,7 @@ class SendPublicAddressAmount():
         len1 = len(os.listdir(url))
         v1 = url + files[len1 - 2]
 
-        wait = WebDriverWait(driver, 10)
+        wait = WebDriverWait(driver, 60)
         wait.until(EC.presence_of_all_elements_located((By.XPATH,'//*[@id="fselector"]')))
         #Upload a file
         driver.find_element_by_xpath('//*[@id="fselector"]').send_keys(v1)

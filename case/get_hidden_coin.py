@@ -11,7 +11,7 @@ the class is for creat hidden TRY coin
 class GetHiddenCoin():
     def get_hidden_coin(self):
         #get config TRY coins
-        hidden_coin=GetConf().get_coins('hidden_coin')
+        hidden_coin=GetConf().get_coins('theCoins','hidden_coin')
 
         driver=Browser().open_browser()
         bs=BasePage(driver)

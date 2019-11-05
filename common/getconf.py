@@ -21,6 +21,6 @@ class GetConf():
         self.config.read(url)
 
     #get config name theCoins
-    def get_coins(self,name):
-        value=self.config.get('theCoins',name)
+    def get_coins(self,key,name):
+        value=self.config.get(key,name)
         return value

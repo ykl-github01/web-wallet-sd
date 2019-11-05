@@ -11,7 +11,7 @@ the class is for get TRY coin
 class GetCoin():
     def getcoin(self):
         #get config TRY coins
-        coin=GetConf().get_coins('coin')
+        coin=GetConf().get_coins('theCoins','coin')
 
         driver=Browser().open_browser()
         bs=BasePage(driver)
