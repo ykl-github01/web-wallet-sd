@@ -47,9 +47,9 @@ class NoEnoughPrivateAddressHiddenAmount():
             except:
                 pass
 
-        #get public address  balance
-        public_account_balance=driver.find_element_by_xpath(
-            '//*[@id="app"]/div/main/div/div[1]/div[2]/div[2]/div[1]/ul/li/span').text
+        #get private address  balance
+        private_address_balance=driver.find_element_by_xpath(
+            '//*[@id="app"]/div/main/div/div/div[2]/div[2]/div[3]/ul/li/span').text
         total_account_balance = driver.find_element_by_xpath(
             '/html/body/div/div/main/div/div/div[2]/div[1]/div[2]/ul/li/span').text
 
@@ -62,7 +62,7 @@ class NoEnoughPrivateAddressHiddenAmount():
             '/html/body/div/div/main/div/div/div[3]/article/article[1]/div[1]/div[1]/input').send_keys(splits[2])
 
         #send how much amount
-        amount=int(public_account_balance)-50
+        amount=int(private_address_balance)-50
         driver.find_element_by_xpath(
             '/html/body/div/div/main/div/div/div[3]/article/article[1]/section/div[2]/div/input').send_keys(amount)
         time.sleep(2)
