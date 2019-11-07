@@ -45,7 +45,7 @@ class CheckViewAccountInfo():
             driver.find_element_by_xpath(
                 '//*[@id="app"]/div/main/div/div/article[1]/div[2]/article/div/div[2]/input').send_keys(Keys.TAB)
             # to login
-            time.sleep(10)
+            time.sleep(8)
             try:
                 driver.find_element_by_xpath(
                     '/html/body/div/div/main/div/div/article[1]/div[2]/article/div/div[3]/a').click()
