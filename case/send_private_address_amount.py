@@ -143,6 +143,3 @@ class SendPrivateAddressAmount():
                 break
         time.sleep(5)
         driver.quit()
-
-if __name__ == '__main__':
-    SendPrivateAddressAmount().send_private_address_amount()
