@@ -117,7 +117,7 @@ class NoEnoughPrivateAddressHiddenAmount():
             # get account_total_amount again
             account_total_amount_second = driver.find_element_by_xpath(
                 '/html/body/div/div/main/div/div/div[2]/div[1]/div[2]/ul/li/span').text
-            if account_total_amount_second != total_account_balance:
+            if int(account_total_amount_second) != int(total_account_balance):
                 print('The account has been updated. Please check')
                 break
         time.sleep(5)

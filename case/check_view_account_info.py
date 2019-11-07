@@ -45,22 +45,21 @@ class CheckViewAccountInfo():
             driver.find_element_by_xpath(
                 '//*[@id="app"]/div/main/div/div/article[1]/div[2]/article/div/div[2]/input').send_keys(Keys.TAB)
             # to login
-            time.sleep(8)
+            time.sleep(10)
             try:
                 driver.find_element_by_xpath(
                     '/html/body/div/div/main/div/div/article[1]/div[2]/article/div/div[3]/a').click()
             except:
                 driver.find_element_by_xpath(
                     '/html/body/div/div/main/div/div/article[1]/div[2]/article/div/div[3]/a').click()
-            time.sleep(2)
             for i in range(100):
                 # get account total balance
                 time.sleep(1)
                 account_total_balance = driver.find_element_by_xpath(
                     '//*[@id="app"]/div/main/div/div/div[2]/div[1]/div[2]/ul/li/span').text
-                if account_total_balance !=0:
+                if int(account_total_balance) !=0:
                     break
-            if account_total_balance == str(account_all_coins):
+            if int(account_total_balance) == int(account_all_coins):
                 break
         time.sleep(3)
         driver.quit()
