@@ -39,13 +39,12 @@ class SendPrivateAddressAmount():
         driver.find_element_by_xpath(
             '//*[@id="app"]/div/main/div/div/article[1]/div[2]/article/div/div[2]/input').send_keys(Keys.TAB)
         #to login
-        time.sleep(8)
+        time.sleep(9)
         try:
             driver.find_element_by_xpath(
                 '/html/body/div/div/main/div/div/article[1]/div[2]/article/div/div[3]/a').click()
         except:
-            driver.find_element_by_xpath(
-                '/html/body/div/div/main/div/div/article[1]/div[2]/article/div/div[3]/a').click()
+            print('This element was not found')
         #Get account amount information
         time.sleep(2)
         for i in range(100):
@@ -144,3 +143,6 @@ class SendPrivateAddressAmount():
                 break
         time.sleep(5)
         driver.quit()
+
+if __name__ == '__main__':
+    SendPrivateAddressAmount().send_private_address_amount()
