@@ -52,7 +52,7 @@ class CheckViewAccountInfo():
             except:
                 driver.find_element_by_xpath(
                     '/html/body/div/div/main/div/div/article[1]/div[2]/article/div/div[3]/a').click()
-            for i in range(100):
+            for i in range(40):
                 # get account total balance
                 time.sleep(1)
                 account_total_balance = driver.find_element_by_xpath(
