@@ -11,6 +11,9 @@ from case.check_view_account_info import CheckViewAccountInfo
 from common.writeexcel import WriteExcel
 import time,os,HTMLTestReportCN
 class WebWalletProcess(unittest.TestCase):
+    '''
+    A circular trading process
+    '''
     def setUp(self):
         pass
     def test_0creat_wallet(self):
@@ -63,7 +66,7 @@ if __name__ == '__main__':
     testsuite.addTest(WebWalletProcess('test_1getcoin'))
     testsuite.addTest(WebWalletProcess('test_2check_view_account_info'))
     testsuite.addTest(WebWalletProcess('test_3creat_excel_write_header'))
-    for i in range(200):
+    for i in range(10):
         testsuite.addTest(WebWalletProcess('test_4send_public_address_amount'))
         testsuite.addTest(WebWalletProcess('test_5send_public_adddress_hidden_amount'))
         testsuite.addTest(WebWalletProcess('test_6send_private_address_amount'))
