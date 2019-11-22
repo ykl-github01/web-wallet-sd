@@ -18,11 +18,7 @@
 
     * 接口地址：/p/global/strategy
 
-    * 返回格式：Json
-
     * 请求方式：Post
-
-    * 请求示例：http://www.baidu.com/p/global/strategy
 
     * 接口备注：通过用户信息，请求获得全局策略。
 
@@ -33,15 +29,6 @@
         |marking |string|true|企业标识|
         |<font color=red>account | string |true|用户名|
         |<font color=red>pw | string |true|用户密码|
-
-    * 返回参数说明：
-
-        | 名称 | 类型 |说明|
-        |----- |------|----|
-        | rt | int|状态码
-        |data | object|具体数据|
-        |identify_method | int|登录方式|
-        |send_url | string|推送地址|
 
     * JSON返回示例：
 
