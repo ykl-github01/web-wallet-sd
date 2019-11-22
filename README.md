@@ -1,6 +1,6 @@
 [TOC]
 ## TM
-* <span id = "strategy">tri_abci_info</span>
+###* <span id = "strategy">tri_abci_info</span>
 
     * @apiName：http://192.168.1.141:46657/tri_abci_info
 
