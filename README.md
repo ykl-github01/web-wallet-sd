@@ -1239,4 +1239,555 @@
     * @apiSuccessExample Success-Response::
     
 ---
+## UTXO
+#域名使用http://192.168.1.3:9981或者https://wallet.trias.one/utxo
 
+ * <span id = "strategy">new_account</span>
+
+    * @apiName：https://wallet.trias.one/utxo/new_account
+
+    * @api：{get}
+
+    * @apiParam:name
+   
+    * @apiSuccessExample Success-Response::
+    
+                {
+                "code": "success",
+                "hash": "9EF8D881741D13791F1882719191AB1182042F4B318DDA3E5BF0578FF2C45865",
+                "msg": "wait a moment, the user name is being registered..."
+            }
+
+ * <span id = "strategy">get_account</span>
+
+    * @apiName：https://wallet.trias.one/utxo/get_account
+
+    * @api：{get}
+
+    * @apiParam:name
+   
+    * @apiSuccessExample Success-Response::
+    
+    
+---
+
+ * <span id = "strategy">get_accounts</span>
+
+    * @apiName：https://wallet.trias.one/utxo/get_accounts
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+                {
+                "accounts": [
+                    "4tUJ9wfxPrQkwJQN37jSGF3fKHBXN4NHiNBg91USM8x7vaJ7Np8yA9466B63qpu3m3DmX75iAeHCpn2zePivCJjD",
+                    "8JCoUWM73aETjg4WbxKfrTTZJua1jbdVZEpZd3G971g6oVBST2JG2KHCQVKCy8H1oZ8iEzQ9Rx3HY3Y25N3smqi",
+                    "b2n6mUKSGi8Uucs5smzAWg6cq7LEs9V3Jyhb7hpHDsf3Uv5o8e5oDJRo7Hsx9vpBX7USykiAsbKHLaYxvTNEueC",
+                    "63ZSVTVigbfWbUrDPuWmSbcXNqtiLm9JQAihAeyxEH1GDqsX8CTJE1V2s4WmkjZQAuYRwAfkQCvifXk6Jm8sNvTx",
+                    "2ENp8uGHrS4xwf6JgUvMahsWnSUGXEep9imDdQmFxh5sFMXyyZ3zikVAqDGxU5tTEqT6BiycvTGUpwPHvSzSjfNR",
+                    "2JNhZnu5NN5zCkQsY5GTZ6BHmprDD6i5HF6VqtyhFChHmzqKkpcjwJ3eiX5CqPs2L1jtA4YAXEniuYnVon2Hr5xy",
+                    "3WyKwNNNzHG6kVCX8M7zpw3dc8Fc9WQMUsc6w4NSt4gKT3c4Xg5JNywgPqFjtmN8xQPZSWEmj2mGNKyMAQa3vGte"
+                ],
+                "code": "success"
+            }
+
+---
+* <span id = "strategy">new_coinbase_tx</span>
+
+    * @apiName：https://wallet.trias.one/utxo/new_coinbase_tx
+
+    * @api：{post}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+---
+* <span id = "strategy">get_balance</span>
+
+    * @apiName：https://wallet.trias.one/utxo/get_balance
+
+    * @api：{post}
+
+    * @apiParam:address
+    
+    * @apiParam:price
+   
+    * @apiSuccessExample Success-Response::
+    
+                {
+                "balance": 0,
+                "balance_hide_amount": [],
+                "code": "success",
+                "crypto_balance": 0,
+                "crypto_balance_hide_amount": []
+            }
+            {
+                "balance": 10000000000000000030,
+                "balance_hide_amount": [
+                    "049dc5bd8fe7d36ecca577b47400429131a07482e8098005af91a18eaca7d0935a917decf2bbddff872cfb3332ca7ddf2eca278a3f394bedc2a8ca18d126ba892ff5e09d0e28235b0d84251e33c2f7655e516628340119c6fdce5caee982909bf31a5ebee05e654bc53e191703d41450420022fc6b530b76d3c25906524e66a5d6c03c120243",
+                       "0421a45d05b5d87d506c31ae84b5e0ae71d49ff702e95a1f1ec772fc282b468912814afc486c311ff421848fc9fd59f666e839bfbcf0b9356482b21355f10c61a73f510f45bf3212c54fa64541f5a4c8431b430e3c98a9b4e4e938f7ffac6724eebd75312a16a76422a065e376d07d984b36dfa9e17f22f32f60328f1a33e7787bc690f4e585"
+                ],
+                "code": "success",
+                "crypto_balance": 0,
+                "crypto_balance_hide_amount": []
+            }
+---
+* <span id = "strategy">new_utxo_transaction</span>
+
+    * @apiName：https://wallet.trias.one/utxo/new_utxo_transaction
+
+    * @api：{post}
+
+    * @apiParam:from_address
+    
+    * @apiParam:to_address
+    
+    * @apiParam:amount
+   
+    * @apiSuccessExample Success-Response::
+
+---
+* <span id = "strategy">find_all_spendable_outputs</span>
+
+    * @apiName：https://wallet.trias.one/utxo/find_all_spendable_outputs
+
+    * @api：{get}
+
+    * @apiParam:from_address
+    
+    * @apiParam:priva
+   
+    * @apiSuccessExample Success-Response::
+    
+                {
+                "accumulated": 0,
+                "code": "success",
+                "msg": "",
+                "unspent_outs": {
+                    "32ADA4F4BFCDF06F48C4382BE39E63218F16BF7D": [
+                        {
+                            "addr": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                            "index": 0,
+                            "shield_pkey": "",
+                            "value": 10000000000000000000,
+                            "value_encrypt": ""
+                        }
+                    ],
+                    "57C71DE2AD84A9745EFF26C9F8695F9202EE1C17": [
+                        {
+                            "addr": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                            "index": 0,
+                            "shield_pkey": "",
+                            "value": "66397e397f56dde0328be82ded6c537d56397a71912b785200fc9f19a557cbf0",
+                            "value_encrypt": "0421a45d05b5d87d506c31ae84b5e0ae71d49ff702e95a1f1ec772fc282b468912814afc486c311ff421848fc9fd59f666e839bfbcf0b9356482b21355f10c61a73f510f45bf3212c54fa64541f5a4c8431b430e3c98a9b4e4e938f7ffac6724eebd75312a16a76422a065e376d07d984b36dfa9e17f22f32f60328f1a33e7787bc690f4e585"
+                        }
+                    ],
+                    "7B4C336BACA34557D148A5B167EF2ED6C003436E": [
+                        {
+                            "addr": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                            "index": 0,
+                            "shield_pkey": "",
+                            "value": 10,
+                            "value_encrypt": ""
+                        }
+                    ],
+                    "7C5BF278E38A0FA9C10E296191EADFD572E2F8EF": [
+                        {
+                            "addr": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                            "index": 0,
+                            "shield_pkey": "",
+                            "value": "76913dc7284abac0b1db00384ca95defe320bf25718f15dc53e9a5d0da13de86",
+                            "value_encrypt": "049dc5bd8fe7d36ecca577b47400429131a07482e8098005af91a18eaca7d0935a917decf2bbddff872cfb3332ca7ddf2eca278a3f394bedc2a8ca18d126ba892ff5e09d0e28235b0d84251e33c2f7655e516628340119c6fdce5caee982909bf31a5ebee05e654bc53e191703d41450420022fc6b530b76d3c25906524e66a5d6c03c120243"
+                        }
+                    ],
+                    "887CA1DD02522409EAF669EA4478B8A0AE4BD47F": [
+                        {
+                            "addr": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                            "index": 0,
+                            "shield_pkey": "",
+                            "value": 10,
+                            "value_encrypt": ""
+                        }
+                    ],
+                    "9A14A923044A895EDE340C7B91B462FF0140B32D": [
+                        {
+                            "addr": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                            "index": 0,
+                            "shield_pkey": "",
+                            "value": 10,
+                            "value_encrypt": ""
+                        }
+                    ],
+                    "ACDD2B6B93669A8BEE638C0ECCBFCB1BD7C32EEA": [
+                        {
+                            "addr": "bed7d3b9cbfce2c9ef8b7cfdc70e64d04f44e0ee2ef3be03e97cdad8ba2c9147",
+                            "index": 1,
+                            "shield_pkey": "ea58a7780f197806edaa1e3d415bcc60b1da205fc35c1a1c4da27cb3b443aac3dd29e798e27bd5932f8aa9295dc9042ac75b502f5467f3fce95d6217fcdd430d",
+                            "value": 95000000000000000000,
+                            "value_encrypt": ""
+                        }
+                    ]
+                }
+            }
+
+---
+* <span id = "strategy">broadcast_tx</span>
+
+    * @apiName：https://wallet.trias.one/utxo/broadcast_tx
+
+    * @api：{post}
+
+    * @apiParam:tx
+   
+    * @apiSuccessExample Success-Response::
+    
+
+---
+* <span id = "strategy">get_prove_data</span>
+
+    * @apiName：https://wallet.trias.one/utxo/get_prove_data
+
+    * @api：{post}
+
+    * @apiParam:参数为数组形式的body data
+   
+    * @apiSuccessExample Success-Response::
+    
+               {
+                   "code": "success",
+                   "content": "[\"30203632353435333038313738393137353737383837303431393631383433333133363034363238343035373339353135323531303331313432313936353536383335323439373037313330383020312030203334303033343438303238323234363434313130373034343037343237343932333838363739353534373039393139333734373534373539333931333231313338323535363632333530353920300A30203434393631333131323236353238333132333538373936323038393634393935303139373639393834353137363538333237373336383837363734353637343337383738323239323134303820393433353938363039333030373432393031363136303937373032373630383332353639393237373036393339383839303734333736353937323135383235333638383639383238383239322031203020313436343433363934303233333830323037303431303538303837393939373238303938333632303335393832343337373337373835333035363236303938363238363236343930343134313620300A30203132363830333634373830303633363934313835363739383037353430363731343732303737303539373633393438323232333634393230313635383639343830383739383136353333313720312030203530303439343636373539343330373734393432373630383235363237313234383239303933303433333035393936373938303139383135343737393436323934333839313537363934323020300A30203438343539383937383033373337373332303633313230373337393039313330383634343037353734343039393535383739313535383435393539353732343636363636373538373132303520300A30203937373830363735333030333235393433343839333834303732373537383631383237393236373333353936393934313936393036343539333530343334323532373231393930343131393620300A\",\"e38990d0c7fc009880a9c07c23842e886c6bbdc964ce6bdd5817ad357335ee6f\",\"d1ec675902ef1633427ca360b290b0b3045a0d9058ddb5e648b4c3c3224c5c68\"]",
+                   "msg": ""
+               }
+
+---
+* <span id = "strategy">get_address_tx</span>
+
+    * @apiName：https://wallet.trias.one/utxo/get_address_tx
+
+    * @api：{get}
+
+    * @apiParam:address
+    
+    * @apiParam:priva
+   
+    * @apiSuccessExample Success-Response::
+    
+            {
+                "txs": [
+                    {
+                        "amount": "76913dc7284abac0b1db00384ca95defe320bf25718f15dc53e9a5d0da13de86",
+                        "from": "YVdtnuhpupvfnVWzk7ZFtR2jhxeJxTDikAoNrvqggnpQo2j9kcUGb71LeXDvrsQAMc4LF7U2VVwDjAW6nTTLtXH",
+                        "is_anonymous": false,
+                        "timestamp": 1572320646007,
+                        "to": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                        "tx_id": "7C5BF278E38A0FA9C10E296191EADFD572E2F8EF",
+                        "type": "receive"
+                    },
+                    {
+                        "amount": 10000000000000000000,
+                        "from": "YVdtnuhpupvfnVWzk7ZFtR2jhxeJxTDikAoNrvqggnpQo2j9kcUGb71LeXDvrsQAMc4LF7U2VVwDjAW6nTTLtXH",
+                        "is_anonymous": false,
+                        "timestamp": 1572320730049,
+                        "to": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                        "tx_id": "32ADA4F4BFCDF06F48C4382BE39E63218F16BF7D",
+                        "type": "receive"
+                    },
+                    {
+                        "amount": 10,
+                        "from": "2wr1S4th8nWU3938q2RUdLMu5jjTLZUQwNfBH5o4XqW5UP79hp8xZKtcCjxMDPLZNfM1zEFEYTNkn27Li7DDkCsG",
+                        "is_anonymous": false,
+                        "timestamp": 1572421066120,
+                        "to": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                        "tx_id": "9A14A923044A895EDE340C7B91B462FF0140B32D",
+                        "type": "receive"
+                    },
+                    {
+                        "amount": 10,
+                        "from": "2wr1S4th8nWU3938q2RUdLMu5jjTLZUQwNfBH5o4XqW5UP79hp8xZKtcCjxMDPLZNfM1zEFEYTNkn27Li7DDkCsG",
+                        "is_anonymous": false,
+                        "timestamp": 1572506405545,
+                        "to": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                        "tx_id": "887CA1DD02522409EAF669EA4478B8A0AE4BD47F",
+                        "type": "receive"
+                    },
+                    {
+                        "amount": 10,
+                        "from": "2wr1S4th8nWU3938q2RUdLMu5jjTLZUQwNfBH5o4XqW5UP79hp8xZKtcCjxMDPLZNfM1zEFEYTNkn27Li7DDkCsG",
+                        "is_anonymous": false,
+                        "timestamp": 1572506523456,
+                        "to": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                        "tx_id": "7B4C336BACA34557D148A5B167EF2ED6C003436E",
+                        "type": "receive"
+                    },
+                    {
+                        "amount": "66397e397f56dde0328be82ded6c537d56397a71912b785200fc9f19a557cbf0",
+                        "from": "QXtE2TsRx6kYcsLh7rBJXApRCywmCoUKx2sYM9pbBTD2HkHpwvF69M4W2bWErTA7FK4uFuSsEpTveKqDshBVvrS",
+                        "is_anonymous": false,
+                        "timestamp": 1573203203724,
+                        "to": "53tCjH1GQf7rd4akqC7ayZnFkJP9Nvappym6w29jyxdzjdYQEUbVTUHDsErBjDhvtTET5QeACgNuD1mCANEYhRGW",
+                        "tx_id": "57C71DE2AD84A9745EFF26C9F8695F9202EE1C17",
+                        "type": "receive"
+                    },
+                    {
+                        "amount": 100000000000000000000,
+                        "from": "mine",
+                        "is_anonymous": true,
+                        "shield_pkey": "39276fd3235f0ec507c05c148c2332bc7cbd6b80246f39510250671c75b6c2213f2cf00198f412d1a9c9f232fb6891196ab1121bb047244fccb0d3d783fa2003",
+                        "timestamp": 1572422456513,
+                        "to": "0210f9933f780e36e8bbc42686619b1f173daa51e627760784fcfc5713c3cf1f",
+                        "tx_id": "114C32B0B0584AD030984AE0D50C55C8D0D1E7EE",
+                        "type": "receive"
+                    },
+                    {
+                        "amount": 5000000000000000000,
+                        "from": "0210f9933f780e36e8bbc42686619b1f173daa51e627760784fcfc5713c3cf1f",
+                        "is_anonymous": true,
+                        "timestamp": 1572422530546,
+                        "to": "70d1ccc4b6a146358fed6b62b89aca557d555f2ed5e0f0148ecf8d097dc4aa08",
+                        "tx_id": "ACDD2B6B93669A8BEE638C0ECCBFCB1BD7C32EEA",
+                        "type": "send"
+                    }
+                ]
+            }
+
+---
+* <span id = "strategy">get_latest_block_height</span>
+
+    * @apiName：https://wallet.trias.one/utxo/get_latest_block_height
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+            {
+                "height": 0,
+                "latest_block_height": "170703"
+            }
+
+---
+## Attestation
+
+* <span id = "strategy">getranking</span>
+
+    * @apiName：http//:192.168.1.3:8987/trias/getranking
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+            [
+              {
+                "attestee": "192.168.1.142", 
+                "score": 0.21045008
+              }, 
+              {
+                "attestee": "192.168.1.143", 
+                "score": 0.170164
+              }, 
+              {
+                "attestee": "192.168.1.146", 
+                "score": 0.15255627
+              }, 
+              {
+                "attestee": "192.168.1.144", 
+                "score": 0.14096914
+              }, 
+              {
+                "attestee": "192.168.1.147", 
+                "score": 0.12405991
+              }, 
+              {
+                "attestee": "192.168.1.145", 
+                "score": 0.10894079
+              }, 
+              {
+                "attestee": "192.168.1.141", 
+                "score": 0.09285981
+              }
+            ]
+
+
+---
+* <span id = "strategy">getverifynodes</span>
+
+    * @apiName：http//:192.168.1.3:8987/trias/getverifynodes
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+---
+* <span id = "strategy">getdistrustfulnodes</span>
+
+    * @apiName：http//:192.168.1.3:8987/trias/getdistrustfulnodes
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+---
+## StreamNet
+
+* <span id = "strategy">QueryNodes</span>
+
+    * @apiName：http//:192.168.1.141:8000/QueryNodes
+
+    * @api：{post}
+
+    * @apiParam: period:1       参数为1代表最新的数据
+    
+    * @apiParam:numRank
+    
+    @apiExample 
+     curl -s -X POST http://192.168.1.141:8000/QueryNodes -H 'Content-Type:application/json' -H 'cache-control: no-cache' -d "{\"period\":-1,\"numRank\":100}"
+
+   
+    * @apiSuccessExample Success-Response::
+    
+    
+                {
+               "Code": 1,
+               "Message": "Query node data successfully",
+               "Data": {
+                  "DataScore": [{
+                     "attestee": "192.168.1.141",
+                     "score": 0.18971772
+                  }, {
+                     "attestee": "192.168.1.145",
+                     "score": 0.17339469
+                  }, {
+                     "attestee": "192.168.1.142",
+                     "score": 0.16059442
+                  }, {
+                     "attestee": "192.168.1.144",
+                     "score": 0.12110464
+                  }, {
+                     "attestee": "192.168.1.143",
+                     "score": 0.11414328
+                  }, {
+                     "attestee": "192.168.1.147",
+                     "score": 0.08592692
+                  }, {
+                     "attestee": "192.168.1.146",
+                     "score": 0.08011833
+                  }, {
+                     "attestee": "5",
+                     "score": 0.01071429
+                  }, {
+                     "attestee": "3",
+                     "score": 0.01071429
+                  }, {
+                     "attestee": "7",
+                     "score": 0.01071429
+                  }, {
+                     "attestee": "2",
+                     "score": 0.01071429
+                  }, {
+                     "attestee": "1",
+                     "score": 0.01071429
+                  }, {
+                     "attestee": "4",
+                     "score": 0.01071429
+                  }, {
+                     "attestee": "6",
+                     "score": 0.01071429
+                  }],
+                  "DataCtx": [{
+                     "attester": "192.168.1.141",
+                     "attestee": "192.168.1.141",
+                     "score": 1
+                  }, {
+                     "attester": "192.168.1.144",
+                     "attestee": "192.168.1.145",
+                     "score": 4
+                  }, {
+                     "attester": "192.168.1.143",
+                     "attestee": "192.168.1.142",
+                     "score": 3
+                  }, {
+                     "attester": "192.168.1.147",
+                     "attestee": "192.168.1.144",
+                     "score": 7
+                  }, {
+                     "attester": "192.168.1.146",
+                     "attestee": "192.168.1.143",
+                     "score": 6
+                  }, {
+                     "attester": "192.168.1.142",
+                     "attestee": "192.168.1.147",
+                     "score": 2
+                  }, {
+                     "attester": "192.168.1.144",
+                     "attestee": "192.168.1.146",
+                     "score": 4
+                  }]
+               }
+            }
+
+
+---
+* <span id = "strategy">AddNode</span>
+
+    * @apiName：http//:192.168.1.141:8000/AddNode
+
+    * @api：{get}
+
+    * @apiParam:
+    
+    * @apiParam:numRank
+    
+    @apiExample 
+     curl -s -X POST http://127.0.0.1:8000/AddNode -H 'Content-Type:application/json' -H 'cache-control: no-cache' -d "{\"Attester\":\"192.168.1.142\",\"Attestee\":\"192.168.1.141\",\"Score\":1}"
+
+   
+    * @apiSuccessExample Success-Response::
+    
+                {
+               "Code": 1,
+               "Message": "Node added successfully",
+               "Data": null
+            }
+---
+* <span id = "strategy">getDagMap</span>
+
+    * @apiName：http://13.250.111.23/streamnet-api/getDagMap
+
+    * @api：{get}
+
+    * @apiParam:
+    
+    * @apiParam:numRank
+    
+    * @apiSuccessExample Success-Response::
+    
+                {
+               "code": 1,
+               "message": "success",
+               "data": [{
+                  "source": "NSDOLA",
+                  "target": "BJUQ9T"
+               }, {
+                  "source": "BJUQ9T",
+                  "target": "EGSSMC"
+               }, {
+                  "source": "BJUQ9T",
+                  "target": "W9ASCQ"
+               }, {
+                  "source": "XWCGMN",
+                  "target": "NSDOLA"
+               }]
+            }
+
+    
