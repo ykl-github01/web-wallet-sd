@@ -1,7 +1,7 @@
 ## TM
-* <span id = "strategy">全局策略</span>
+* <span id = "strategy">tri_abci_info</span>
 
-    * 接口地址：/p/global/strategy
+    * 接口地址：http://192.168.1.141:46657/tri_abci_info
 
     * 请求方式：Post
 
