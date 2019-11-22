@@ -1,4 +1,5 @@
 [TOC]
+tri_api_list
 ## TM
 * <span id = "strategy">tri_abci_info</span>
 
