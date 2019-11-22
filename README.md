@@ -1,6 +1,6 @@
-[TOC]
+
 ## TM
-###* <span id = "strategy">tri_abci_info</span>
+* <span id = "strategy">tri_abci_info</span>
 
     * @apiName：http://192.168.1.141:46657/tri_abci_info
 
@@ -86,7 +86,7 @@
 
     * @apiSuccessExample Success-Response:：
     
-                {
+             {
               "jsonrpc": "2.0",
               "id": "",
               "result": {
@@ -169,8 +169,8 @@
     * @apiParam：
 
     * @apiSuccessExample Success-Response:：
+            
             {
-               
               "jsonrpc": "2.0",
               "id": "",
               "result": {
@@ -372,75 +372,871 @@
             }
 
 ---
-目录
+* <span id = "strategy">tri_blockchain_interval</span>
 
-1\. 查询指定项目属性接口
+    * @apiName：http://192.168.1.141:46657/tri_blockchain_interval
+
+    * @api：{get}
+
+    * @apiParam：minHeight
+    
+    * @apiParam：maxHeight
+    
+    * @apiSuccessExample Success-Response:：
+    
+             {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "last_height": "8876",
+                "block_metas": [
+                  {
+                    "block_id": {
+                      "hash": "FCD02B8AF701DB13435696415B0607AB67F3477EE0D04CF2F5CB9A3D1C818ED1",
+                      "parts": {
+                        "total": "1",
+                        "hash": "EF9263BDFD1E51F7A9A94D8D4FADE216B37CCB6E03483DA9B67096203F193724"
+                      }
+                    },
+                    "header": {
+                      "version": {
+                        "block": "10",
+                        "app": "1"
+                      },
+                      "chain_id": "test-chain-rx2wEB",
+                      "height": "8876",
+                      "time": "2019-11-12T01:51:22.116283024Z",
+                      "num_txs": "0",
+                      "total_txs": "67819",
+                      "last_block_id": {
+                        "hash": "FF152C5A7F5118C8D734CE226B7FECF4B3A33B781B413A6165A45C35FF80AC51",
+                        "parts": {
+                          "total": "1",
+                          "hash": "CE1369D274D32288D926E13F3F2742876EB2A2DEA8EB8D346307A8A55CAA13E0"
+                        }
+                      },
+                      "last_commit_hash": "B1CFDCE15C5CADD10E292706601C3ACEB0C67464DD0E5611CAC81C98421AFE59",
+                      "data_hash": "",
+                      "validators_hash": "21B4A15832BD5AFA4558FC9ABF9491A5625191AE179E6A9CE9CBCCE6EDCD9C03",
+                      "next_validators_hash": "1833360CD55F80843A8D024CD4F78272E2A2DCB1AA2E3ABA93D139D4CA22C940",
+                      "consensus_hash": "048091BC7DDC283F77BFBF91D73C44DA58C3DF8A9CBC867405D8B7F3DAADA22F",
+                      "app_hash": "0DBA8296740C3AD831F7CE9961007822AD539A6D",
+                      "last_results_hash": "6E340B9CFFB37A989CA544E6BB780A2C78901D3FB33738768511A30617AFA01D",
+                      "evidence_hash": "",
+                      "proposer_address": "F061FEC70049C4CCCB45A2B15E59BFDD9AFBE9C8"
+                    }
+                  }
+              }
+            }
+            
+---
+* <span id = "strategy">tri_bc_tx_async</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_bc_tx_async
+
+    * @api：{get}
+
+    * @apiParam：tx
+    
+    * @apiSuccessExample Success-Response:：
+                
+            {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "code": 0,
+                "data": "",
+                "log": "",
+                "hash": "C8F17AA3210DE569D147D3350D356F018747C16794A5996E5CC6A71A8588D423"
+              }
+            }
+---
+* <span id = "strategy">tri_bc_tx_commit</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_bc_tx_commit
+
+    * @api：{get}
+
+    * @apiParam：tx
+    
+    * @apiSuccessExample Success-Response:：
+    
+                {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "check_tx": {
+                  "gasWanted": "1"
+                },
+                "deliver_tx": {
+                  "tags": [
+                    {
+                      "key": "YXBwLmNyZWF0b3I=",
+                      "value": "VHJpYXMgTmV0b3dva28="
+                    },
+                    {
+                      "key": "YXBwLmtleQ==",
+                      "value": "WzE1NzM1MjcwMDFdYXNkYXNkYXNk"
+                    }
+                  ]
+                },
+                "hash": "84B430D7072DF2E16C68D2C98FEFF78E45922E3C6E2F99907286A1F3DC350668",
+                "height": "8881"
+              }
+            }
+     
+---
+* <span id = "strategy">tri_abci_query</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_abci_query
+
+    * @api：{get}
+
+    * @apiParam：path
+    
+    * @apiParam  data
+    
+    * @apiParam  prove
+    
+    * @apiSuccessExample Success-Response:：
+    
+ ---
+ * <span id = "strategy">tri_block_commit</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_block_commit
+
+    * @api：{get}
+
+    * @apiParam:
+    
+    * @apiSuccessExample Success-Response:：
+    
+                {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "signed_header": {
+                  "header": {
+                    "version": {
+                      "block": "10",
+                      "app": "1"
+                    },
+                    "chain_id": "test-chain-rx2wEB",
+                    "height": "8884",
+                    "time": "2019-11-12T03:10:30.38881153Z",
+                    "num_txs": "0",
+                    "total_txs": "67823",
+                    "last_block_id": {
+                      "hash": "CDDD7FE7866A681BDE908D8FB7F195A0FAD33442D1461055506CA37BE2767982",
+                      "parts": {
+                        "total": "1",
+                        "hash": "FDE753C026A624FE6CD89B54D2071EDC2329EBAE563FC13CF2B3BF58B56743CA"
+                      }
+                    },
+                    "last_commit_hash": "4F276617C297B56057B44EFFC76871290AFB04C77F9D570F27AD3303ED360E7D",
+                    "data_hash": "",
+                    "validators_hash": "1833360CD55F80843A8D024CD4F78272E2A2DCB1AA2E3ABA93D139D4CA22C940",
+                    "next_validators_hash": "1833360CD55F80843A8D024CD4F78272E2A2DCB1AA2E3ABA93D139D4CA22C940",
+                    "consensus_hash": "048091BC7DDC283F77BFBF91D73C44DA58C3DF8A9CBC867405D8B7F3DAADA22F",
+                    "app_hash": "40C9977A678421ABF2F722E65CAB39C31B77033E",
+                    "last_results_hash": "6E340B9CFFB37A989CA544E6BB780A2C78901D3FB33738768511A30617AFA01D",
+                    "evidence_hash": "",
+                    "proposer_address": "A8E396910669DC753D17BFC40FE600731F5C36F5"
+                  },
+                  "commit": {
+                    "block_id": {
+                      "hash": "23B76BF79EA07497366AA436430F3253C89EFAA115E597496D94368A22F495F9",
+                      "parts": {
+                        "total": "1",
+                        "hash": "E38F305577182764CDB5A5A567745D923259D921A67118748408696B6914D886"
+                      }
+                    },
+                    "precommits": [
+                      {
+                        "type": 2,
+                        "height": "8884",
+                        "round": "0",
+                        "block_id": {
+                          "hash": "23B76BF79EA07497366AA436430F3253C89EFAA115E597496D94368A22F495F9",
+                          "parts": {
+                            "total": "1",
+                            "hash": "E38F305577182764CDB5A5A567745D923259D921A67118748408696B6914D886"
+                          }
+                        },
+                        "timestamp": "2019-11-12T03:10:31.70634381Z",
+                        "validator_address": "881F5463E5CB4276FF71A229B53072CC0213DF2B",
+                        "validator_index": "0",
+                        "signature": "swdVvKI3uMFT9URvrFPgS6o+MpwMLYKUZGoyCw0cfq4oKUYUiTwOVkcVa4DXe1g72c2+twae3SzCs5+elk9pBg=="
+                      },
+                      {
+                        "type": 2,
+                        "height": "8884",
+                        "round": "0",
+                        "block_id": {
+                          "hash": "23B76BF79EA07497366AA436430F3253C89EFAA115E597496D94368A22F495F9",
+                          "parts": {
+                            "total": "1",
+                            "hash": "E38F305577182764CDB5A5A567745D923259D921A67118748408696B6914D886"
+                          }
+                        },
+                        "timestamp": "2019-11-12T03:10:31.786985681Z",
+                        "validator_address": "A8E396910669DC753D17BFC40FE600731F5C36F5",
+                        "validator_index": "1",
+                        "signature": "1OJjMOIO/feKlPomD2yMVIoNwcqkxENov8bm2zk8snMwlRPnAlksUPXvawVZRN1Sb30yXUiF/ZmAgPvpB4V3CA=="
+                      }
+                    ]
+                  }
+                },
+                "canonical": false
+              }
+            }
 
 ---
+ * <span id = "strategy">tri_block_tx</span>
 
-**1\. 查询指定项目属性**
-###### 接口功能
-> 获取制定项目的分类信息
+    * @apiName：http://192.168.1.141:46657/tri_block_tx
 
-###### URL
-> [http://www.api.com/index.php](www.api.com/index.php)
+    * @api：{get}
 
-###### 支持格式
-> JSON
+    * @apiParam:hash
+    
+    * @apiParam:prove
+    
+    * @apiSuccessExample Success-Response:：
+    
+    
+---
+ * <span id = "strategy">tri_broadcast_kernel</span>
 
-###### HTTP请求方式
-> GET
+    * @apiName：http://192.168.1.141:46657/tri_broadcast_kernel
 
-###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|-----                               |
-|name    |ture    |string|请求的项目名                          |
-|type    |true    |int   |请求项目的类型。1：类型一；2：类型二 。|
+    * @api：{get}
 
-###### 返回字段
-> |返回字段|字段类型|说明                              |
-|:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|company  |string | 所属公司名                      |
-|category |string |所属类型                         |
+    * @apiParam:data
+    
+    * @apiSuccessExample Success-Response::
+    
+            {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "code": "200",
+                "log": "success"
+              }
+            }
 
-###### 接口示例
-> 地址：[http://www.api.com/index.php?name="可口可乐"&type=1](http://www.api.com/index.php?name="可口可乐"&type=1)
-``` javascript
-{
-    "statue": 0,
-    "company": "可口可乐",
-    "category": "饮料",
-}
-## 1. 登录
-### 1.1 功能描述
-提供手机号和密码的登录方式。
-### 1.2 请求说明
-> 请求方式：POST<br>
-请求URL ：[login](#)
+---
+ * <span id = "strategy">tri_broadcast_msg</span>
 
-### 1.3 请求参数
-字段       |字段类型       |字段说明
-------------|-----------|-----------
-phone       |int        |手机号
-password       |string        |密码
-### 1.4 返回结果
-```json  
-{
-  "data": {
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vc2FsZS1hcGkuZGV2L2xvZ2luIiwiaWF0IjoxNDkxNTMyOTI4LCJleHAiOjE0OTIyNTI5MjgsIm5iZiI6MTQ5MTUzMjkyOCwianRpIjoiN1hCUXdwN1FHZmxUdHVVQiIsInV1aWQiOiI1MDZjYWY3MCJ9.FyyXagHtBfDBtMJZPV_hm2q6CVULpY63JPDGDHXc"
-  },
-  "code": "200",
-  "msg": "SUCCESS"
-}
+    * @apiName：http://192.168.1.141:46657/tri_broadcast_msg
 
-### 1.5 返回参数
-字段       |字段类型       |字段说明
-------------|-----------|-----------
-token       |string        |token值
-### 1.6 错误状态码
-状态码       |说明
-------------|-----------
-3001       |其他认证错误信息！
-3002       |用户不存在！
-3003       |用户名或密码有误！
+    * @api：{get}
+
+    * @apiParam:data
+    
+    * @apiSuccessExample Success-Response::
+    
+            {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "code": "200",
+                "log": "success"
+              }
+            }
+---
+ * <span id = "strategy">tri_broadcast_prove</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_broadcast_prove
+
+    * @api：{get}
+
+    * @apiParam:data
+    
+    * @apiSuccessExample Success-Response::
+    
+              {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "code": "200",
+                "log": "success"
+              }
+              
+---
+ * <span id = "strategy">tri_get_subscribe</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_get_subscribe
+
+    * @api：{get}
+
+    * @apiParam:event
+    
+    * @apiSuccessExample Success-Response::
+    
+---
+
+ * <span id = "strategy">tri_get_unsubscribe</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_get_unsubscribe
+
+    * @api：{get}
+
+    * @apiParam:event
+    
+    * @apiSuccessExample Success-Response::
+    
+---
+ * <span id = "strategy">tri_net_info</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_net_info
+
+    * @api：{get}
+
+    * @apiParam:event
+    
+    * @apiSuccessExample Success-Response::
+    
+             {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "listening": true,
+                "listeners": [
+                  "Listener(@)"
+                ],
+                "n_peers": "7",
+                "peers": [
+                  {
+                    "node_info": {
+                      "protocol_version": {
+                        "p2p": "7",
+                        "block": "10",
+                        "app": "1"
+                      },
+                      "id": "79f24251c9a3e5ec625be6f94fab1072a2f6ac06",
+                      "listen_addr": "tcp://0.0.0.0:46656",
+                      "network": "test-chain-rx2wEB",
+                      "version": "0.31.8",
+                      "channels": "4020212223262425303800",
+                      "moniker": "ubt18-trias-dag-143",
+                      "other": {
+                        "tx_index": "on",
+                        "rpc_address": "tcp://0.0.0.0:46657"
+                      }
+                    },
+                    "is_outbound": false,
+                    "connection_status": {
+                      "Duration": "256412628860794",
+                      "SendMonitor": {
+                        "Active": true,
+                        "Start": "2019-11-09T07:40:45.14Z",
+                        "Duration": "256412620000000",
+                        "Idle": "2700000000",
+                        "Bytes": "11914642",
+                        "Samples": "38806",
+                        "InstRate": "5",
+                        "CurRate": "9",
+                        "AvgRate": "46",
+                        "PeakRate": "143158",
+                        "BytesRem": "0",
+                        "TimeRem": "0",
+                        "Progress": 0
+                      },
+                      "RecvMonitor": {
+                        "Active": true,
+                        "Start": "2019-11-09T07:40:45.14Z",
+                        "Duration": "256412620000000",
+                        "Idle": "2580000000",
+                        "Bytes": "2260525",
+                        "Samples": "37899",
+                        "InstRate": "0",
+                        "CurRate": "14",
+                        "AvgRate": "9",
+                        "PeakRate": "26700",
+                        "BytesRem": "0",
+                        "TimeRem": "0",
+                        "Progress": 0
+                      },
+                      "Channels": [
+                        {
+                          "ID": 48,
+                          "SendQueueCapacity": "1",
+                          "SendQueueSize": "0",
+                          "Priority": "5",
+                          "RecentlySent": "0"
+                        },
+                        {
+                          "ID": 64,
+                          "SendQueueCapacity": "1000",
+                          "SendQueueSize": "0",
+                          "Priority": "10",
+                          "RecentlySent": "0"
+                        },
+                         "remote_ip": "192.168.1.146"
+                  }
+                ]
+              }
+            }
+
+
+---
+ * <span id = "strategy">tri_dump_consensus_state</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_dump_consensus_state
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+               {
+                 "jsonrpc": "2.0",
+                 "id": "",
+                 "result": {
+                   "round_state": {
+                     "height": "8885",
+                     "round": "0",
+                     "step": 2,
+                     "start_time": "2019-11-12T03:10:32.906211321Z",
+                     "commit_time": "2019-11-12T03:10:31.906211321Z",
+                     "validators": {
+                       "validators": [
+                         {
+                           "address": "881F5463E5CB4276FF71A229B53072CC0213DF2B",
+                           "pub_key": {
+                             "type": "tendermint/PubKeyEd25519",
+                             "value": "R00Mp/3CaLbOvMiCHZRxLVSha+o+RAMGynMz81BF0Uo="
+                           },
+                           "voting_power": "1002",
+                           "proposer_priority": "-981"
+                         },
+                         {
+                           "address": "A8E396910669DC753D17BFC40FE600731F5C36F5",
+                           "pub_key": {
+                             "type": "tendermint/PubKeyEd25519",
+                             "value": "GY9X2m4N5jigj4gqdh6MgvT4JapfSdo5+UHCL+173dA="
+                           },
+                           "voting_power": "1001",
+                           "proposer_priority": "981"
+                         }
+                       ],
+                       "proposer": {
+                         "address": "881F5463E5CB4276FF71A229B53072CC0213DF2B",
+                         "pub_key": {
+                           "type": "tendermint/PubKeyEd25519",
+                           "value": "R00Mp/3CaLbOvMiCHZRxLVSha+o+RAMGynMz81BF0Uo="
+                         },
+                         "voting_power": "1002",
+                         "proposer_priority": "-981"
+                       }
+                     },
+                     "proposal": null,
+                     "proposal_block": null,
+                     "proposal_block_parts": null,
+                     "locked_round": "-1",
+                     "locked_block": null,
+                     "locked_block_parts": null,
+                     "valid_round": "-1",
+                     "valid_block": null,
+                     "valid_block_parts": null,
+                     "votes": [
+                       {
+                         "round": "0",
+                         "prevotes": [
+                           "nil-Vote",
+                           "nil-Vote"
+                         ],
+                         "prevotes_bit_array": "BA{2:__} 0/2003 = 0.00",
+                         "precommits": [
+                           "nil-Vote",
+                           "nil-Vote"
+                         ],
+                         "precommits_bit_array": "BA{2:__} 0/2003 = 0.00"
+                       },
+                       {
+                         "round": "1",
+                         "prevotes": [
+                           "nil-Vote",
+                           "nil-Vote"
+                         ],
+                         "prevotes_bit_array": "BA{2:__} 0/2003 = 0.00",
+                         "precommits": [
+                           "nil-Vote",
+                           "nil-Vote"
+                         ],
+                         "precommits_bit_array": "BA{2:__} 0/2003 = 0.00"
+                       }
+                     ],
+                     "commit_round": "-1",
+                     "last_commit": {
+                       "votes": [
+                         "Vote{0:881F5463E5CB 8884/00/2(Precommit) 23B76BF79EA0 B30755BCA237 @ 2019-11-12T03:10:31.70634381Z}",
+                         "Vote{1:A8E396910669 8884/00/2(Precommit) 23B76BF79EA0 D4E26330E20E @ 2019-11-12T03:10:31.786985681Z}"
+                       ],
+                       "votes_bit_array": "BA{2:xx} 2003/2003 = 1.00",
+                       "peer_maj_23s": {}
+                     },
+                     "last_validators": {
+                       "validators": [
+                         {
+                           "address": "881F5463E5CB4276FF71A229B53072CC0213DF2B",
+                           "pub_key": {
+                             "type": "tendermint/PubKeyEd25519",
+                             "value": "R00Mp/3CaLbOvMiCHZRxLVSha+o+RAMGynMz81BF0Uo="
+                           },
+                           "voting_power": "1002",
+                           "proposer_priority": "20"
+                         },
+                         {
+                           "address": "A8E396910669DC753D17BFC40FE600731F5C36F5",
+                           "pub_key": {
+                             "type": "tendermint/PubKeyEd25519",
+                             "value": "GY9X2m4N5jigj4gqdh6MgvT4JapfSdo5+UHCL+173dA="
+                           },
+                           "voting_power": "1001",
+                           "proposer_priority": "-20"
+                         }
+                       ],
+                       "proposer": {
+                         "address": "A8E396910669DC753D17BFC40FE600731F5C36F5",
+                         "pub_key": {
+                           "type": "tendermint/PubKeyEd25519",
+                           "value": "GY9X2m4N5jigj4gqdh6MgvT4JapfSdo5+UHCL+173dA="
+                         },
+                         "voting_power": "1001",
+                         "proposer_priority": "-20"
+                       }
+                     },
+                     "triggered_timeout_precommit": false
+                   },
+                   "peers": [
+                     {
+                       "node_address": "79f24251c9a3e5ec625be6f94fab1072a2f6ac06@192.168.1.143:57824",
+                       "peer_state": {
+                         "round_state": {
+                           "height": "8885",
+                           "round": "0",
+                           "step": 1,
+                           "start_time": "2019-11-12T03:10:32.107287565Z",
+                           "proposal": false,
+                           "proposal_block_parts_header": {
+                             "total": "0",
+                             "hash": ""
+                           },
+                           "proposal_block_parts": null,
+                           "proposal_pol_round": "-1",
+                           "proposal_pol": "__",
+                           "prevotes": "__",
+                           "precommits": "__",
+                           "last_commit_round": "0",
+                           "last_commit": "xx",
+                           "catchup_commit_round": "-1",
+                           "catchup_commit": "__"
+                         },
+                         "stats": {
+                           "votes": "966",
+                           "block_parts": "78"
+                         }
+                       }
+                     },
+                     {
+                       "node_address": "fe8461d424b60b07d23a55a3906e848bcaa7a42d@192.168.1.147:37816",
+                       "peer_state": {
+                         "round_state": {
+                           "height": "8885",
+                           "round": "0",
+                           "step": 1,
+                           "start_time": "2019-11-12T03:10:32.119596915Z",
+                           "proposal": false,
+                           "proposal_block_parts_header": {
+                             "total": "0",
+                             "hash": ""
+                           },
+                           "proposal_block_parts": null,
+                           "proposal_pol_round": "-1",
+                           "proposal_pol": "__",
+                           "prevotes": "__",
+                           "precommits": "__",
+                           "last_commit_round": "0",
+                           "last_commit": "xx",
+                           "catchup_commit_round": "-1",
+                           "catchup_commit": "__"
+                         },
+                         "stats": {
+                           "votes": "659",
+                           "block_parts": "76"
+                         }
+                       }
+                     },
+                     {
+                       "node_address": "8f575bcf0cbde2a00df802bd22e2884ef7b95c31@192.168.1.145:48536",
+                       "peer_state": {
+                         "round_state": {
+                           "height": "8885",
+                           "round": "0",
+                           "step": 1,
+                           "start_time": "2019-11-12T03:10:31.903956914Z",
+                           "proposal": false,
+                           "proposal_block_parts_header": {
+                             "total": "0",
+                             "hash": ""
+                           },
+                           "proposal_block_parts": null,
+                           "proposal_pol_round": "-1",
+                           "proposal_pol": "__",
+                           "prevotes": "__",
+                           "precommits": "__",
+                           "last_commit_round": "0",
+                           "last_commit": "xx",
+                           "catchup_commit_round": "-1",
+                           "catchup_commit": "__"
+                         },
+                         "stats": {
+                           "votes": "946",
+                           "block_parts": "81"
+                         }
+                       }
+                     },
+                     {
+                       "node_address": "72d73dd17c43e9d78d952a4e5d5b79402507282a@192.168.1.127:47596",
+                       "peer_state": {
+                         "round_state": {
+                           "height": "8885",
+                           "round": "0",
+                           "step": 1,
+                           "start_time": "2019-11-12T03:10:32.119758316Z",
+                           "proposal": false,
+                           "proposal_block_parts_header": {
+                             "total": "0",
+                             "hash": ""
+                           },
+                           "proposal_block_parts": null,
+                           "proposal_pol_round": "-1",
+                           "proposal_pol": "__",
+                           "prevotes": "__",
+                           "precommits": "__",
+                           "last_commit_round": "0",
+                           "last_commit": "xx",
+                           "catchup_commit_round": "-1",
+                           "catchup_commit": "__"
+                         },
+                         "stats": {
+                           "votes": "0",
+                           "block_parts": "0"
+                         }
+                       }
+                     },
+                     {
+                       "node_address": "70eb2f1bc5393396d677b5f86a0f999da51c816c@192.168.1.144:41666",
+                       "peer_state": {
+                         "round_state": {
+                           "height": "8885",
+                           "round": "0",
+                           "step": 1,
+                           "start_time": "2019-11-12T03:10:32.088836027Z",
+                           "proposal": false,
+                           "proposal_block_parts_header": {
+                             "total": "0",
+                             "hash": ""
+                           },
+                           "proposal_block_parts": null,
+                           "proposal_pol_round": "-1",
+                           "proposal_pol": "__",
+                           "prevotes": "__",
+                           "precommits": "__",
+                           "last_commit_round": "0",
+                           "last_commit": "xx",
+                           "catchup_commit_round": "-1",
+                           "catchup_commit": "__"
+                         },
+                         "stats": {
+                           "votes": "987",
+                           "block_parts": "78"
+                         }
+                       }
+                     },
+                     {
+                       "node_address": "11df5b88c1dc6de8f90e396f52d02d32f7a0899d@192.168.1.142:38864",
+                       "peer_state": {
+                         "round_state": {
+                           "height": "8885",
+                           "round": "0",
+                           "step": 1,
+                           "start_time": "2019-11-12T03:10:32.108466981Z",
+                           "proposal": false,
+                           "proposal_block_parts_header": {
+                             "total": "0",
+                             "hash": ""
+                           },
+                           "proposal_block_parts": null,
+                           "proposal_pol_round": "-1",
+                           "proposal_pol": "__",
+                           "prevotes": "__",
+                           "precommits": "__",
+                           "last_commit_round": "0",
+                           "last_commit": "xx",
+                           "catchup_commit_round": "-1",
+                           "catchup_commit": "__"
+                         },
+                         "stats": {
+                           "votes": "1008",
+                           "block_parts": "78"
+                         }
+                       }
+                     },
+                     {
+                       "node_address": "9a0862252cfd532f027feadffbdea076b0072367@192.168.1.146:56036",
+                       "peer_state": {
+                         "round_state": {
+                           "height": "8885",
+                           "round": "0",
+                           "step": 1,
+                           "start_time": "2019-11-12T03:10:32.114840028Z",
+                           "proposal": false,
+                           "proposal_block_parts_header": {
+                             "total": "0",
+                             "hash": ""
+                           },
+                           "proposal_block_parts": null,
+                           "proposal_pol_round": "-1",
+                           "proposal_pol": "__",
+                           "prevotes": "__",
+                           "precommits": "__",
+                           "last_commit_round": "0",
+                           "last_commit": "xx",
+                           "catchup_commit_round": "-1",
+                           "catchup_commit": "__"
+                         },
+                         "stats": {
+                           "votes": "0",
+                           "block_parts": "0"
+                         }
+                       }
+                     }
+                   ]
+                 }
+               }
+             
+---
+ * <span id = "strategy">tri_event_query</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_event_query
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+
+               {
+                 "jsonrpc": "2.0",
+                 "id": "",
+                 "result": [
+                   {
+                     "timestamp": "1573285837",
+                     "type": "1"
+                   },
+                   {
+                     "timestamp": "1573523482",
+                     "type": "2"
+                   }
+                 ]
+               }
+
+---
+ * <span id = "strategy">tri_first_block</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_first_block
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+                {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "genesis": {
+                  "genesis_time": "2019-08-28T10:31:06.328205413Z",
+                  "chain_id": "test-chain-rx2wEB",
+                  "consensus_params": {
+                    "block": {
+                      "max_bytes": "22020096",
+                      "max_gas": "-1",
+                      "time_iota_ms": "1000"
+                    },
+                    "evidence": {
+                      "max_age": "100000"
+                    },
+                    "validator": {
+                      "pub_key_types": [
+                        "ed25519"
+                      ]
+                    }
+                  },
+                  "validators": [
+                    {
+                      "address": "881F5463E5CB4276FF71A229B53072CC0213DF2B",
+                      "pub_key": {
+                        "type": "tendermint/PubKeyEd25519",
+                        "value": "R00Mp/3CaLbOvMiCHZRxLVSha+o+RAMGynMz81BF0Uo="
+                      },
+                      "power": "10",
+                      "name": ""
+                    }
+                  ],
+                  "app_hash": ""
+                }
+              }
+            }
+---
+ * <span id = "strategy">tri_num_unconfirmed_txs</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_num_unconfirmed_txs
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+                {
+              "jsonrpc": "2.0",
+              "id": "",
+              "result": {
+                "n_txs": "0",
+                "total": "0",
+                "total_bytes": "0",
+                "txs": null
+              }
+            }
+
+---
+ * <span id = "strategy">tri_clean_unconfirmed_txs</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_clean_unconfirmed_txs
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+    
+---
+ * <span id = "strategy">tri_unconfirmed_txs</span>
+
+    * @apiName：http://192.168.1.141:46657/tri_unconfirmed_txs
+
+    * @api：{get}
+
+    * @apiParam:
+   
+    * @apiSuccessExample Success-Response::
+    
+---
+
