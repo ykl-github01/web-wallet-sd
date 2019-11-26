@@ -1,4 +1,9 @@
-[TOC]
+- [TM](#tm)
+- [UTXO](#utxo)
+- [Attestation](#attestation)
+- [StreamNet](#streamnet)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## TM
 * <span id = "strategy">tri_abci_info</span>
