@@ -7,13 +7,13 @@
 # TM
 ## tri_abci_info
 
-    * @apiName：http://192.168.1.141:46657/tri_abci_info
+   * @apiName：http://192.168.1.141:46657/tri_abci_info
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：
+   * @apiParam：
 
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
            
              {
                   "jsonrpc": "2.0",
@@ -30,15 +30,15 @@
               }
               
 ---
-* <span id = "strategy">tri_api_list</span>
+## tri_api_list
 
-    * @apiName：http://192.168.1.141:46657/tri_api_list
+   * @apiName：http://192.168.1.141:46657/tri_api_list
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：
+   * @apiParam：
 
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
            
             {
               "jsonrpc": "2.0",
@@ -81,15 +81,15 @@
 
               
 ---
-* <span id = "strategy">tri_block_validators</span>
+## tri_block_validators
 
-    * @apiName：http://192.168.1.141:46657/tri_block_validators
+   * @apiName：http://192.168.1.141:46657/tri_block_validators
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：
+   * @apiParam：
 
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
     
              {
               "jsonrpc": "2.0",
@@ -165,15 +165,15 @@
             }
 
 ---
-* <span id = "strategy">tri_block_info</span>
+## tri_block_info
 
-    * @apiName：http://192.168.1.141:46657/tri_block_info
+   * @apiName：http://192.168.1.141:46657/tri_block_info
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：
+   * @apiParam：
 
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
             
             {
               "jsonrpc": "2.0",
@@ -377,17 +377,17 @@
             }
 
 ---
-* <span id = "strategy">tri_blockchain_interval</span>
+## tri_blockchain_interval
 
-    * @apiName：http://192.168.1.141:46657/tri_blockchain_interval
+   * @apiName：http://192.168.1.141:46657/tri_blockchain_interval
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：minHeight
+   * @apiParam：minHeight
     
-    * @apiParam：maxHeight
+   * @apiParam：maxHeight
     
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
     
              {
               "jsonrpc": "2.0",
@@ -435,15 +435,15 @@
             }
             
 ---
-* <span id = "strategy">tri_bc_tx_async</span>
+## tri_bc_tx_async
 
-    * @apiName：http://192.168.1.141:46657/tri_bc_tx_async
+   * @apiName：http://192.168.1.141:46657/tri_bc_tx_async
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：tx
+   * @apiParam：tx
     
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
                 
             {
               "jsonrpc": "2.0",
@@ -456,15 +456,15 @@
               }
             }
 ---
-* <span id = "strategy">tri_bc_tx_commit</span>
+## tri_bc_tx_commit
 
-    * @apiName：http://192.168.1.141:46657/tri_bc_tx_commit
+   * @apiName：http://192.168.1.141:46657/tri_bc_tx_commit
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：tx
+   * @apiParam：tx
     
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
     
                 {
               "jsonrpc": "2.0",
@@ -491,30 +491,30 @@
             }
      
 ---
-* <span id = "strategy">tri_abci_query</span>
+## tri_abci_query
 
-    * @apiName：http://192.168.1.141:46657/tri_abci_query
+   * @apiName：http://192.168.1.141:46657/tri_abci_query
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam：path
+   * @apiParam：path
     
-    * @apiParam  data
+   * @apiParam  data
     
-    * @apiParam  prove
+   * @apiParam  prove
     
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
     
  ---
- * <span id = "strategy">tri_block_commit</span>
+## tri_block_commit
 
-    * @apiName：http://192.168.1.141:46657/tri_block_commit
+   * @apiName：http://192.168.1.141:46657/tri_block_commit
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
     
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
     
                 {
               "jsonrpc": "2.0",
@@ -597,29 +597,29 @@
             }
 
 ---
- * <span id = "strategy">tri_block_tx</span>
+## tri_block_tx
 
-    * @apiName：http://192.168.1.141:46657/tri_block_tx
+   * @apiName：http://192.168.1.141:46657/tri_block_tx
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:hash
+   * @apiParam:hash
     
-    * @apiParam:prove
+   * @apiParam:prove
     
-    * @apiSuccessExample Success-Response:：
+   * @apiSuccessExample Success-Response:：
     
     
 ---
- * <span id = "strategy">tri_broadcast_kernel</span>
+## tri_broadcast_kernel
 
-    * @apiName：http://192.168.1.141:46657/tri_broadcast_kernel
+   * @apiName：http://192.168.1.141:46657/tri_broadcast_kernel
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:data
+   * @apiParam:data
     
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
             {
               "jsonrpc": "2.0",
@@ -631,15 +631,15 @@
             }
 
 ---
- * <span id = "strategy">tri_broadcast_msg</span>
+## tri_broadcast_msg
 
-    * @apiName：http://192.168.1.141:46657/tri_broadcast_msg
+   * @apiName：http://192.168.1.141:46657/tri_broadcast_msg
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:data
+   * @apiParam:data
     
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
             {
               "jsonrpc": "2.0",
@@ -650,15 +650,15 @@
               }
             }
 ---
- * <span id = "strategy">tri_broadcast_prove</span>
+## tri_broadcast_prove
 
-    * @apiName：http://192.168.1.141:46657/tri_broadcast_prove
+   * @apiName：http://192.168.1.141:46657/tri_broadcast_prove
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:data
+   * @apiParam:data
     
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
               {
               "jsonrpc": "2.0",
@@ -669,38 +669,38 @@
               }
               
 ---
- * <span id = "strategy">tri_get_subscribe</span>
+## tri_get_subscribe
 
-    * @apiName：http://192.168.1.141:46657/tri_get_subscribe
+   * @apiName：http://192.168.1.141:46657/tri_get_subscribe
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:event
+   * @apiParam:event
     
-    * @apiSuccessExample Success-Response::
-    
----
-
- * <span id = "strategy">tri_get_unsubscribe</span>
-
-    * @apiName：http://192.168.1.141:46657/tri_get_unsubscribe
-
-    * @api：{get}
-
-    * @apiParam:event
-    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
 ---
- * <span id = "strategy">tri_net_info</span>
 
-    * @apiName：http://192.168.1.141:46657/tri_net_info
+## tri_get_unsubscribe
 
-    * @api：{get}
+   * @apiName：http://192.168.1.141:46657/tri_get_unsubscribe
 
-    * @apiParam:event
+   * @api：{get}
+
+   * @apiParam:event
     
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
+    
+---
+## tri_net_info
+
+   * @apiName：http://192.168.1.141:46657/tri_net_info
+
+   * @api：{get}
+
+   * @apiParam:event
+    
+   * @apiSuccessExample Success-Response::
     
              {
               "jsonrpc": "2.0",
@@ -786,15 +786,15 @@
 
 
 ---
- * <span id = "strategy">tri_dump_consensus_state</span>
+## tri_dump_consensus_state
 
-    * @apiName：http://192.168.1.141:46657/tri_dump_consensus_state
+   * @apiName：http://192.168.1.141:46657/tri_dump_consensus_state
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                {
                  "jsonrpc": "2.0",
@@ -1125,15 +1125,15 @@
                }
              
 ---
- * <span id = "strategy">tri_event_query</span>
+## tri_event_query
 
-    * @apiName：http://192.168.1.141:46657/tri_event_query
+   * @apiName：http://192.168.1.141:46657/tri_event_query
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
 
                {
                  "jsonrpc": "2.0",
@@ -1151,15 +1151,15 @@
                }
 
 ---
- * <span id = "strategy">tri_first_block</span>
+## tri_first_block
 
-    * @apiName：http://192.168.1.141:46657/tri_first_block
+   * @apiName：http://192.168.1.141:46657/tri_first_block
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                 {
               "jsonrpc": "2.0",
@@ -1199,15 +1199,15 @@
               }
             }
 ---
- * <span id = "strategy">tri_num_unconfirmed_txs</span>
+## tri_num_unconfirmed_txs
 
-    * @apiName：http://192.168.1.141:46657/tri_num_unconfirmed_txs
+   * @apiName：http://192.168.1.141:46657/tri_num_unconfirmed_txs
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                 {
               "jsonrpc": "2.0",
@@ -1221,71 +1221,71 @@
             }
 
 ---
- * <span id = "strategy">tri_clean_unconfirmed_txs</span>
+## tri_clean_unconfirmed_txs
 
-    * @apiName：http://192.168.1.141:46657/tri_clean_unconfirmed_txs
+   * @apiName：http://192.168.1.141:46657/tri_clean_unconfirmed_txs
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
     
 ---
- * <span id = "strategy">tri_unconfirmed_txs</span>
+ ## tri_unconfirmed_txs
 
-    * @apiName：http://192.168.1.141:46657/tri_unconfirmed_txs
+   * @apiName：http://192.168.1.141:46657/tri_unconfirmed_txs
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
 ---
-## UTXO
+# UTXO
 
 #域名使用http://192.168.1.3:9981或者https://wallet.trias.one/utxo
 
- * <span id = "strategy">new_account</span>
+## new_account
 
-    * @apiName：https://wallet.trias.one/utxo/new_account
+   * @apiName：https://wallet.trias.one/utxo/new_account
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:name
+   * @apiParam:name
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
-                {
+            {
                 "code": "success",
                 "hash": "9EF8D881741D13791F1882719191AB1182042F4B318DDA3E5BF0578FF2C45865",
                 "msg": "wait a moment, the user name is being registered..."
             }
 
- * <span id = "strategy">get_account</span>
+## get_account
 
-    * @apiName：https://wallet.trias.one/utxo/get_account
+   * @apiName：https://wallet.trias.one/utxo/get_account
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:name
+   * @apiParam:name
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
     
 ---
 
- * <span id = "strategy">get_accounts</span>
+## get_accounts
 
-    * @apiName：https://wallet.trias.one/utxo/get_accounts
+   * @apiName：https://wallet.trias.one/utxo/get_accounts
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                 {
                 "accounts": [
@@ -1301,28 +1301,28 @@
             }
 
 ---
-* <span id = "strategy">new_coinbase_tx</span>
+## new_coinbase_tx
 
-    * @apiName：https://wallet.trias.one/utxo/new_coinbase_tx
+   * @apiName：https://wallet.trias.one/utxo/new_coinbase_tx
 
-    * @api：{post}
+   * @api：{post}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
 ---
-* <span id = "strategy">get_balance</span>
+## get_balance
 
-    * @apiName：https://wallet.trias.one/utxo/get_balance
+   * @apiName：https://wallet.trias.one/utxo/get_balance
 
-    * @api：{post}
+   * @api：{post}
 
-    * @apiParam:address
+   * @apiParam:address
     
-    * @apiParam:price
+   * @apiParam:price
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                 {
                 "balance": 0,
@@ -1342,32 +1342,32 @@
                 "crypto_balance_hide_amount": []
             }
 ---
-* <span id = "strategy">new_utxo_transaction</span>
+## new_utxo_transaction
 
-    * @apiName：https://wallet.trias.one/utxo/new_utxo_transaction
+   * @apiName：https://wallet.trias.one/utxo/new_utxo_transaction
 
-    * @api：{post}
+   * @api：{post}
 
-    * @apiParam:from_address
+   * @apiParam:from_address
     
-    * @apiParam:to_address
+   * @apiParam:to_address
     
-    * @apiParam:amount
+   * @apiParam:amount
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
 
 ---
-* <span id = "strategy">find_all_spendable_outputs</span>
+## find_all_spendable_outputs
 
-    * @apiName：https://wallet.trias.one/utxo/find_all_spendable_outputs
+   * @apiName：https://wallet.trias.one/utxo/find_all_spendable_outputs
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:from_address
+   * @apiParam:from_address
     
-    * @apiParam:priva
+   * @apiParam:priva
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                 {
                 "accumulated": 0,
@@ -1441,27 +1441,27 @@
             }
 
 ---
-* <span id = "strategy">broadcast_tx</span>
+## broadcast_tx
 
-    * @apiName：https://wallet.trias.one/utxo/broadcast_tx
+   * @apiName：https://wallet.trias.one/utxo/broadcast_tx
 
-    * @api：{post}
+   * @api：{post}
 
-    * @apiParam:tx
+   * @apiParam:tx
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
 
 ---
-* <span id = "strategy">get_prove_data</span>
+## get_prove_data
 
-    * @apiName：https://wallet.trias.one/utxo/get_prove_data
+   * @apiName：https://wallet.trias.one/utxo/get_prove_data
 
-    * @api：{post}
+   * @api：{post}
 
-    * @apiParam:参数为数组形式的body data
+   * @apiParam:参数为数组形式的body data
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                {
                    "code": "success",
@@ -1470,17 +1470,17 @@
                }
 
 ---
-* <span id = "strategy">get_address_tx</span>
+## get_address_tx
 
-    * @apiName：https://wallet.trias.one/utxo/get_address_tx
+   * @apiName：https://wallet.trias.one/utxo/get_address_tx
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:address
+   * @apiParam:address
     
-    * @apiParam:priva
+   * @apiParam:priva
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
             {
                 "txs": [
@@ -1561,15 +1561,15 @@
             }
 
 ---
-* <span id = "strategy">get_latest_block_height</span>
+## get_latest_block_height
 
-    * @apiName：https://wallet.trias.one/utxo/get_latest_block_height
+   * @apiName：https://wallet.trias.one/utxo/get_latest_block_height
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
             {
                 "height": 0,
@@ -1577,17 +1577,17 @@
             }
 
 ---
-## Attestation
+# Attestation
 
-* <span id = "strategy">getranking</span>
+## getranking
 
-    * @apiName：http//:192.168.1.3:8987/trias/getranking
+   * @apiName：http//:192.168.1.3:8987/trias/getranking
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
             [
               {
@@ -1622,39 +1622,39 @@
 
 
 ---
-* <span id = "strategy">getverifynodes</span>
+## getverifynodes
 
-    * @apiName：http//:192.168.1.3:8987/trias/getverifynodes
+   * @apiName：http//:192.168.1.3:8987/trias/getverifynodes
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
 ---
-* <span id = "strategy">getdistrustfulnodes</span>
+## getdistrustfulnodes
 
-    * @apiName：http//:192.168.1.3:8987/trias/getdistrustfulnodes
+   * @apiName：http//:192.168.1.3:8987/trias/getdistrustfulnodes
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
    
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
 ---
-## StreamNet
+# StreamNet
 
-* <span id = "strategy">QueryNodes</span>
+## QueryNodes
 
-    * @apiName：http//:192.168.1.141:8000/QueryNodes
+   * @apiName：http//:192.168.1.141:8000/QueryNodes
 
-    * @api：{post}
+   * @api：{post}
 
-    * @apiParam: period:1       参数为1代表最新的数据
+   * @apiParam: period:1       参数为1代表最新的数据
     
-    * @apiParam:numRank
+   * @apiParam:numRank
     
     @apiExample 
      curl -s -X POST http://192.168.1.141:8000/QueryNodes -H 'Content-Type:application/json' -H 'cache-control: no-cache' -d "{\"period\":-1,\"numRank\":100}"
@@ -1744,15 +1744,15 @@
 
 
 ---
-* <span id = "strategy">AddNode</span>
+## AddNode
 
-    * @apiName：http//:192.168.1.141:8000/AddNode
+   * @apiName：http//:192.168.1.141:8000/AddNode
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
     
-    * @apiParam:numRank
+   * @apiParam:numRank
     
     @apiExample 
      curl -s -X POST http://127.0.0.1:8000/AddNode -H 'Content-Type:application/json' -H 'cache-control: no-cache' -d "{\"Attester\":\"192.168.1.142\",\"Attestee\":\"192.168.1.141\",\"Score\":1}"
@@ -1766,17 +1766,17 @@
                "Data": null
             }
 ---
-* <span id = "strategy">getDagMap</span>
+## getDagMap
 
-    * @apiName：http://13.250.111.23/streamnet-api/getDagMap
+   * @apiName：http://13.250.111.23/streamnet-api/getDagMap
 
-    * @api：{get}
+   * @api：{get}
 
-    * @apiParam:
+   * @apiParam:
     
-    * @apiParam:numRank
+   * @apiParam:numRank
     
-    * @apiSuccessExample Success-Response::
+   * @apiSuccessExample Success-Response::
     
                 {
                "code": 1,
