@@ -1,6 +1,6 @@
 - [TM](#tm)
-  * [tri_abci_info](#tri-abci-info)
-  * [tri_api_list](#tri-api-list)
+  * [tri-abci-info](#tri-abci-info)
+  * [tri_api_list](#tri_api_list)
   * [tri_block_validators](#tri-block-validators)
   * [tri_block_info](#tri-block-info)
   * [tri_blockchain_interval](#tri-blockchain-interval)
